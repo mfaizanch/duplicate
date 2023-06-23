@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>OUTFITTERS WEB APP</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+
+  <!-- Refused to execute script from 'http://localhost:3000/server.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. -->
+
+
+<!--   
+  <script type="application/json" src="server.js">
+</script> -->
+
+
+  <!-- Uncaught TypeError: Cannot read properties of null (reading 'innerHTML') -->
+
+  <!-- <div id="jsonStr"> </div>
+  <script type="text/javascript" src="server.js">
+</script> -->
+
+  <style>
+    table,
+    td,
+    th {
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: 50%;
+      height: 50px;
+      vertical-align: bottom;
+      padding: 15px;
+    }
+  </style>
+  <form action="/form" method="POST" accept-charset="utf-8">
+    <div class="knit-info" align="center">
+      <span><label for="inputgender">Gender </label></span>
+      <span><input id="inputgender" type="text" class="text-center" required=""
+          placeholder="Enter gender" /></span><br />
+      <span><label for="inputcollection">Collection </label></span>
+      <span><input id="inputcollection" type="text" class="text-center" required="" /></span><br />
+      <span><label for="input_class">Class </label></span>
+      <span><input id="input_class" type="text" class="text-center" required="" /></span><br />
+      <span><label for="inputsubclass">Subclass </label></span>
+      <span><input id="inputsubclass" type="text" class="text-center" required="" /></span><br />
+      <span><label for="inputseason">Season </label></span>
+      <span><input id="inputseason" type="text" class="text-center" required="" /></span><br />
+      <span><label for="inputfabrication">Fabrication </label></span>
+      <span><input id="inputfabrication" type="text" class="text-center" required="" /></span><br />
+      <span><label for="inputfit">Fit </label></span>
+      <span><input id="inputfit" type="text" class="text-center" required="" /></span><br />
+      <span><label for="inputdrop">Drop </label></span>
+      <span><input id="inputdrop" type="text" class="text-center" required="" /></span><br />
+      <span><label for="inputstyle_count">Style Count </label></span>
+      <span><input id="inputstyle_count" type="text" class="text-center" required="" /></span><br />
+      <span><label for="inputstyle">Style </label></span>
+      <span><input id="inputstyle" type="text" class="text-center" required="" /></span><br />
+      <span><label for="inputstyle_color">Style Color </label></span>
+      <span><input id="inputstyle_color" type="text" class="text-center" required="" /></span><br />
+      <span><label for="inputcolor_name">Color Name </label></span>
+      <span><input id="inputcolor_name" type="text" class="text-center" required="" /></span><br />
+      <span><label for="inputcost">Cost </label></span>
+      <span><input id="inputcost" type="number" class="text-center" required="" /></span><br />
+      <span><label for="inputretail">Retail </label></span>
+      <span><input id="inputretail" type="number" class="text-center" required="" /></span><br />
+      <span><label for="inputquantity">Quantity </label></span>
+      <span><input id="inputquantity" type="number" class="text-center" required="" /></span><br />
+      <span><label for="inputcost_value">Cost Value </label></span>
+      <span><input id="inputcost_value" type="number" class="text-center" required="" /></span><br />
+      <span><label for="inputretail_value">Retail Value </label></span>
+      <span><input id="inputretail_value" type="number" class="text-center" required="" /></span><br />
+      <span><label for="inputcomments">Comments </label></span>
+      <span><input id="inputcomments" type="text" class="text-center" required="" /></span><br />
+      <span><label for="inputlabel_of_sizes">Label Of Sizes </label></span>
+      <span><input id="inputlabel_of_sizes" type="text" class="text-center" required="" /></span><br />
+      <span><label for="inputassortment">Assortment </label></span>
+      <span><input id="inputassortment" type="text" class="text-center" required="" /></span><br />
+      <span><label for="inputdelivery_date">Delivery Date </label></span>
+      <span><input id="inputdelivery_date" type="date" class="text-center" required="" /></span><br />
+      <span><label for="inputsupplier">Supplier </label></span>
+      <span><input id="inputsupplier" type="text" class="text-center" required="" /></span><br />
+      <span><label for="inputbal">Bal </label></span>
+      <span><input id="inputbal" type="number" class="text-center" required="" /></span><br />
+      <span><label for="inputXS">XS </label></span>
+      <span><input id="inputXS" type="number" class="text-center" required="" /></span><br />
+      <span><label for="inputS">S </label></span>
+      <span><input id="inputS" type="number" class="text-center" required="" /></span><br />
+      <span><label for="inputM">M </label></span>
+      <span><input id="inputM" type="number" class="text-center" required="" /></span><br />
+      <span><label for="inputL">L </label></span>
+      <span><input id="inputL" type="number" class="text-center" required="" /></span><br />
+      <span><label for="inputXL">XL </label></span>
+      <span><input id="inputXL" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_24">'24</label></span>
+      <span><input id="input_24" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_26">'26</label></span>
+      <span><input id="input_26" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_28">'28 </label></span>
+      <span><input id="input_28" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_30">'30 </label></span>
+      <span><input id="input_30" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_32">'32 </label></span>
+      <span><input id="input_32" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_34">'34 </label></span>
+      <span><input id="input_34" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_36">'36 </label></span>
+      <span><input id="input_36" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_38">'38 </label></span>
+      <span><input id="input_38" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_6_7y">'6_7y </label></span>
+      <span><input id="input_6_7y" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_7_8y">'7_8y </label></span>
+      <span><input id="input_7_8y" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_8_9y">'8_9y </label></span>
+      <span><input id="input_8_9y" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_9_10y">'9_10y </label></span>
+      <span><input id="input_9_10y" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_10_11y">'10_11y </label></span>
+      <span><input id="input_10_11y" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_11_12y">'11_12y </label></span>
+      <span><input id="input_11_12y" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_13_14y">'13_14y </label></span>
+      <span><input id="input_13_14y" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_6_12m">'6_12m </label></span>
+      <span><input id="input_6_12m" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_12_18m">'12_18m </label></span>
+      <span><input id="input_12_18m" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_18_24m">'18_24m </label></span>
+      <span><input id="input_18_24m" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_2_3y">'2_3y </label></span>
+      <span><input id="input_2_3y" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_3_4y">'3_4y </label></span>
+      <span><input id="input_3_4y" type="number" class="text-center" required="" /></span><br />
+      <span><label for="input_4_5y">'4_5y </label></span>
+      <span><input id="input_4_5y" type="number" class="text-center" required="" /></span><br />
+    </div>
+
+    <div class="logo">
+      <input type="button" onClick="insertData()" value="SUBMIT" />
+    </div>
+  </form>
+
+  <!-- <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="exponential.js"></script> -->
+
+  <script language="javascript">
+
+
+    function insertData() {
+      console.log('##### hello from faizans function')
+      var gender = document.getElementById("inputgender").value;
+      var collection = document.getElementById("inputcollection").value;
+      var _class = document.getElementById("input_class").value;
+      var subclass = document.getElementById("inputsubclass").value;
+      var season = document.getElementById("inputseason").value;
+      var fabrication = document.getElementById("inputfabrication").value;
+      var fit = document.getElementById("inputfit").value;
+      var drop = document.getElementById("inputdrop").value;
+      var style_count = document.getElementById("inputstyle_count").value;
+      var style = document.getElementById("inputstyle").value;
+      var style_color = document.getElementById("inputstyle_color").value;
+      var color_name = document.getElementById("inputcolor_name").value;
+      var cost = document.getElementById("inputcost").value;
+      var retail = document.getElementById("inputretail").value;
+      var quantity = document.getElementById("inputquantity").value;
+      var cost_value = document.getElementById("inputcost_value").value;
+      var retail_value = document.getElementById("inputretail_value").value;
+      var comments = document.getElementById("inputcomments").value;
+      var label_of_sizes = document.getElementById(
+        "inputlabel_of_sizes"
+      ).value;
+      var assortment = document.getElementById("inputassortment").value;
+      var delivery_date = document.getElementById("inputdelivery_date").value;
+      var supplier = document.getElementById("inputsupplier").value;
+      var bal = document.getElementById("inputbal").value;
+      var XS = document.getElementById("inputXS").value;
+      var S = document.getElementById("inputS").value;
+      var M = document.getElementById("inputM").value;
+      var L = document.getElementById("inputL").value;
+      var XL = document.getElementById("inputXL").value;
+      var _24 = document.getElementById("input_24").value;
+      var _26 = document.getElementById("input_26").value;
+      var _28 = document.getElementById("input_28").value;
+      var _30 = document.getElementById("input_30").value;
+      var _32 = document.getElementById("input_32").value;
+      var _34 = document.getElementById("input_34").value;
+      var _36 = document.getElementById("input_36").value;
+      var _38 = document.getElementById("input_38").value;
+      var _6_7y = document.getElementById("input_6_7y").value;
+      var _7_8y = document.getElementById("input_7_8y").value;
+      var _8_9y = document.getElementById("input_8_9y").value;
+      var _9_10y = document.getElementById("input_9_10y").value;
+      var _10_11y = document.getElementById("input_10_11y").value;
+      var _11_12y = document.getElementById("input_11_12y").value;
+      var _13_14y = document.getElementById("input_13_14y").value;
+      var _6_12m = document.getElementById("input_6_12m").value;
+      var _12_18m = document.getElementById("input_12_18m").value;
+      var _18_24m = document.getElementById("input_18_24m").value;
+      var _2_3y = document.getElementById("input_2_3y").value;
+      var _3_4y = document.getElementById("input_3_4y").value;
+      var _4_5y = document.getElementById("input_4_5y").value;
+
+      var obj = {
+        inputgender: document.getElementById("inputgender").value,
+        inputcollection: document.getElementById("inputcollection").value,
+        input_class: document.getElementById("input_class").value,
+        inputsubclass: document.getElementById("inputsubclass").value,
+        inputseason: document.getElementById("inputseason").value,
+        inputfabrication: document.getElementById("inputfabrication").value,
+        inputfit: document.getElementById("inputfit").value,
+        inputdrop: document.getElementById("inputdrop").value,
+        inputstyle_count: document.getElementById("inputstyle_count").value,
+        inputstyle: document.getElementById("inputstyle").value,
+        inputstyle_color: document.getElementById("inputstyle_color").value,
+        inputcolor_name: document.getElementById("inputcolor_name").value,
+        inputcost: document.getElementById("inputcost").value,
+        inputretail: document.getElementById("inputretail").value,
+        inputquantity: document.getElementById("inputquantity").value,
+        inputcost_value: document.getElementById("inputcost_value").value,
+        inputretail_value: document.getElementById("inputretail_value").value,
+        inputcomments: document.getElementById("inputcomments").value,
+        inputlabel_of_sizes: document.getElementById(
+          "inputlabel_of_sizes"
+        ).value,
+        inputassortment: document.getElementById("inputassortment").value,
+        inputdelivery_date: document.getElementById("inputdelivery_date").value,
+        inputsupplier: document.getElementById("inputsupplier").value,
+        inputbal: document.getElementById("inputbal").value,
+        inputXS: document.getElementById("inputXS").value,
+        inputS: document.getElementById("inputS").value,
+        inputM: document.getElementById("inputM").value,
+        inputL: document.getElementById("inputL").value,
+        inputXL: document.getElementById("inputXL").value,
+        input_24: document.getElementById("input_24").value,
+        input_26: document.getElementById("input_26").value,
+        input_28: document.getElementById("input_28").value,
+        input_30: document.getElementById("input_30").value,
+        input_32: document.getElementById("input_32").value,
+        input_34: document.getElementById("input_34").value,
+        input_36: document.getElementById("input_36").value,
+        input_38: document.getElementById("input_38").value,
+        input_6_7y: document.getElementById("input_6_7y").value,
+        input_7_8y: document.getElementById("input_7_8y").value,
+        input_8_9y: document.getElementById("input_8_9y").value,
+        input_9_10y: document.getElementById("input_9_10y").value,
+        input_10_11y: document.getElementById("input_10_11y").value,
+        input_11_12y: document.getElementById("input_11_12y").value,
+        input_13_14y: document.getElementById("input_13_14y").value,
+        input_6_12m: document.getElementById("input_6_12m").value,
+        input_12_18m: document.getElementById("input_12_18m").value,
+        input_18_24m: document.getElementById("input_18_24m").value,
+        input_2_3y: document.getElementById("input_2_3y").value,
+        input_3_4y: document.getElementById("input_3_4y").value,
+        input_4_5y: document.getElementById("input_4_5y").value,
+
+
+
+
+      }
+
+      console.log(obj)
+      var jsonStr = JSON.stringify(obj)
+      console.log(jsonStr)
+
+
+      document.getElementById("insertionPoint").innerHTML +=
+        "<tr><td>" +
+        gender +
+        "</td><td>" +
+        collection +
+        "</td><td>" +
+        _class +
+        "</td><td>" +
+        subclass +
+        "</td><td>" +
+        season +
+        "</td><td>" +
+        fabrication +
+        "</td><td>" +
+        fit +
+        "</td><td>" +
+        drop +
+        "</td><td>" +
+        style_count +
+        "</td><td>" +
+        style +
+        "</td><td>" +
+        style_color +
+        "</td><td>" +
+        color_name +
+        "</td><td>" +
+        cost +
+        "</td><td>" +
+        retail +
+        "</td><td>" +
+        quantity +
+        "</td><td>" +
+        cost_value +
+        "</td><td>" +
+        retail_value +
+        "</td><td>" +
+        comments +
+        "</td><td>" +
+        label_of_sizes +
+        "</td><td>" +
+        assortment +
+        "</td><td>" +
+        delivery_date +
+        "</td><td>" +
+        supplier +
+        "</td><td>" +
+        bal +
+        "</td><td>" +
+        XS +
+        "</td><td>" +
+        S +
+        "</td><td>" +
+        M +
+        "</td><td>" +
+        L +
+        "</td><td>" +
+        XL +
+        "</td><td>" +
+        _24 +
+        "</td><td>" +
+        _26 +
+        "</td><td>" +
+        _28 +
+        "</td><td>" +
+        _30 +
+        "</td><td>" +
+        _32 +
+        "</td><td>" +
+        _34 +
+        "</td><td>" +
+        _36 +
+        "</td><td>" +
+        _38 +
+        "</td><td>" +
+        _6_7y +
+        "</td><td>" +
+        _7_8y +
+        "</td><td>" +
+        _8_9y +
+        "</td><td>" +
+        _9_10y +
+        "</td><td>" +
+        _10_11y +
+        "</td><td>" +
+        _11_12y +
+        "</td><td>" +
+        _13_14y +
+        "</td><td>" +
+        _6_12m +
+        "</td><td>" +
+        _12_18m +
+        "</td><td>" +
+        _18_24m +
+        "</td><td>" +
+        _2_3y +
+        "</td><td>" +
+        _3_4y +
+        "</td><td>" +
+        _4_5y +
+        "</td></tr>";
+
+      // The below part is to clear the values after the entry is added.
+      document.getElementById("inputgender").value = "";
+      document.getElementById("inputcollection").value = "";
+      document.getElementById("input_class").value = "";
+      document.getElementById("inputsubclass").value = "";
+      document.getElementById("inputseason").value = "";
+      document.getElementById("inputfabrication").value = "";
+      document.getElementById("inputfit").value = "";
+      document.getElementById("inputstyle_count").value = "";
+      document.getElementById("inputstyle").value = "";
+      document.getElementById("inputstyle_color").value = "";
+      document.getElementById("inputcolor_name").value = "";
+      document.getElementById("inputcost").value = "";
+      document.getElementById("inputretail").value = "";
+      document.getElementById("inputquantity").value = "";
+      document.getElementById("inputcost_value").value = "";
+      document.getElementById("inputretail_value").value = "";
+      document.getElementById("inputcomments").value = "";
+      document.getElementById("inputlabel_of_sizes").value = "";
+      document.getElementById("inputassortment").value = "";
+      document.getElementById("inputdelivery_date").value = "";
+      document.getElementById("inputsupplier").value = "";
+      document.getElementById("inputbal").value = "";
+      document.getElementById("inputXS").value = "";
+      document.getElementById("inputS").value = "";
+      document.getElementById("inputM").value = "";
+      document.getElementById("inputL").value = "";
+      document.getElementById("inputXL").value = "";
+      document.getElementById("input_24").value = "";
+      document.getElementById("input_26").value = "";
+      document.getElementById("input_28").value = "";
+      document.getElementById("input_30").value = "";
+      document.getElementById("input_32").value = "";
+      document.getElementById("input_34").value = "";
+      document.getElementById("input_36").value = "";
+      document.getElementById("input_38").value = "";
+      document.getElementById("input_6_7y").value = "";
+      document.getElementById("input_7_8y").value = "";
+      document.getElementById("input_8_9y").value = "";
+      document.getElementById("input_9_10y").value = "";
+      document.getElementById("input_10_11y").value = "";
+      document.getElementById("input_11_12y").value = "";
+      document.getElementById("input_13_14y").value = "";
+      document.getElementById("input_6_12m").value = "";
+      document.getElementById("input_12_18m").value = "";
+      document.getElementById("input_18_24m").value = "";
+      document.getElementById("input_2_3y").value = "";
+      document.getElementById("input_3_4y").value = "";
+      document.getElementById("input_4_5y").value = "";
+    }
+  </script>
+
+  <table id="t1">
+    <h1>Knit Table</h1>
+    <colgroup>
+      <col span="2" class="c2" />
+      <col />
+      <col class="c1" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Gender</th>
+        <th>Collection</th>
+        <th>Class</th>
+        <th>Subclass</th>
+        <th>season</th>
+        <th>Fabrication</th>
+        <th>Fit</th>
+        <th>Drop</th>
+        <th>Style Count</th>
+        <th>Style color</th>
+        <th>Colar name</th>
+        <th>Cost</th>
+        <th>Retail</th>
+        <th>Quantity</th>
+        <th>Cost Value</th>
+        <th>Retail Value</th>
+        <th>Comments</th>
+        <th>Label Of Sizes</th>
+        <th>Assortment</th>
+        <th>delivery_date</th>
+        <th>supplier</th>
+        <th>bal</th>
+        <th>XS</th>
+        <th>S</th>
+        <th>M</th>
+        <th>L</th>
+        <th>XL</th>
+        <th>24</th>
+        <th>26</th>
+        <th>28</th>
+        <th>30</th>
+        <th>32</th>
+        <th>34</th>
+        <th>36</th>
+        <th>38</th>
+        <th>6_7y</th>
+        <th>7_8y</th>
+        <th>8_9y</th>
+        <th>9_10y</th>
+        <th>10_11y</th>
+        <th>11_12y</th>
+        <th>13_14y</th>
+        <th>6_12m</th>
+        <th>12_18m</th>
+        <th>18_24m</th>
+        <th>2_3y</th>
+        <th>3_4y</th>
+        <th>4_5y</th>
+      </tr>
+    </thead>
+    <tbody id="insertionPoint"></tbody>
+  </table>
+</body>
+
+</html>

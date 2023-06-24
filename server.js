@@ -1,11 +1,14 @@
 const express = require("express");
 
 const path = require("path");
-const bodyParser = require("body-parser");
+const bodyparser= require("body-parser");
 const knitRoutes = require("./src/knit/routes");
 const app = express();
 
 const port = process.env.PORT || 3000;
+
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({extended: true}));
 
 app.post("/form", (req) => {
   console.log("hello from post listener");
